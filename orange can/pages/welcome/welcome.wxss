@@ -1,0 +1,39 @@
+.container{
+  /*  设置布局为flex 可以保证在属性为container的view盒子 里的元素都可以应用弹性布局属性*/
+  display: flex;
+  /* 设置主轴为向下处置列 */
+  flex-direction: column;
+  /* 让所有的元素都居中显示 */
+  align-items: center;
+  background-color: #ECC0A8
+}
+.avatar{
+  /* 使用rpx可以是组件自适应屏幕的高度和宽度 */
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 160rpx;
+}
+.motto{
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  font-weight:bold;
+  color:#9F4311;
+}
+.journey-container{
+  margin-top: 200rpx;
+  border:  1px solid #EA5A3C;
+  width:200rpx;
+  height:80rpx;
+  border-radius:5px;
+  text-align: center
+}
+.journey{
+  font-size:22rpx;
+  font-weight:bold;
+  line-height:80rpx;
+  color:#EA5A3C
+}
+/* 对整个页面背景做设置 */
+page{
+  background-color:#ECC0A8
+}
