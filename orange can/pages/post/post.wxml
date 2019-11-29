@@ -1,0 +1,79 @@
+<!--pages/post/post.wxml-->
+<!-- 轮播图item -->
+<view>
+    <swiper indicator-dots="true" autoplay="true" interval="3000">
+      <swiper-item>
+        <image src="../../images/post/post-1@text.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+         <image src="../../images/post/post-2@text.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+         <image src="../../images/post/post-3@text.jpg"></image>
+      </swiper-item>
+    </swiper>
+</view>
+   <!-- 文章列表   1 -->
+<view class="post-container">
+  <view class="post-author-date">
+    <image src="../../images/avatar/avatar-5.png"></image>
+    <text>Jan 28 2017</text>
+  </view>
+  <text class="post-title">小时候的冰棍和雪糕</text>
+    <image src="../../images/post/post-4.jpg" mode="aspectFill"></image>
+  <text class="post-content">
+    我小时候，我们那个湘南小镇能见到的冰棒只有四个品种:白糖冰棒，绿豆冰棒，糯米冰棒，雪糕冰棒。价格嘛，“白糖"三分钱一根，“绿豆”、“糯米“五分钱一根，“雪糕"最贵，要一毛钱一根。
+  </text>
+  <view class="post-like">
+    <image src="../../images/icon/wx_app_collect.png"></image>
+    <text>108</text>
+    <image src="../../images/icon/wx_app_view.png"></image>
+    <text>92</text>
+    <image src="../../images/icon/wx_app_message.png"></image>
+    <text>7</text>
+  </view>
+</view>
+
+  <!-- 文章列表   2 -->
+
+<view class="post-container">
+  <view class="post-author-date">
+    <image src="../../images/avatar/avatar-1.png"></image>
+    <text>Jan 9 2017</text>
+  </view>
+  <text class="post-title">从童年呼啸而过的火车</text>
+  <image src="../../images/post/post-5.jpg" mode="aspectFill"></image>
+  <text class="post-content">
+    小时候，家的后面有一条铁路。听说从南方北上的火车都必须经过这条铁路、火车大多在晚上经过，但也不定是只有在那夜深人静的时候，火车的声音才能从远方传来...
+  </text>
+  <view class="post-like">
+    <image src="../../images/icon/wx_app_collect.png"></image>
+    <text>108</text>
+    <image src="../../images/icon/wx_app_view.png"></image>
+    <text>92</text>
+    <image src="../../images/icon/wx_app_message.png"></image>
+    <text>7</text>
+  </view>
+</view>
+
+  <!-- 文章列表   3 -->
+<view class="post-container">
+  <view class="post-author-date">
+    <image src="../../images/avatar/avatar-3.png"></image>
+    <text>Jan 29 2017</text>
+  </view>
+  <text class="post-title">记忆里的春节</text>
+  <image src="../../images/post/post-1.jpg" mode="aspectFill"></image>
+  <text class="post-content">
+   年少时。有几样东西，是春节里必不可少的：烟花、新衣、凉菜、压岁钱、饺子。年分大小年。
+   有的地方是腊月二十三过小年，有的是腊月二十四......
+  </text>
+  <view class="post-like">
+    <image src="../../images/icon/wx_app_collect.png"></image>
+    <text>108</text>
+    <image src="../../images/icon/wx_app_view.png"></image>
+    <text>92</text>
+    <image src="../../images/icon/wx_app_message.png"></image>
+    <text>7</text>
+  </view>
+</view>
