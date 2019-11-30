@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/post/post",
+    
     "pages/welcome/welcome",
+    "pages/post/post",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ECC0A8",
+    "navigationBarBackgroundColor": "#4A6141",
     "navigationBarTitleText": "Richard",
     "navigationBarTextStyle": "black"
   },
