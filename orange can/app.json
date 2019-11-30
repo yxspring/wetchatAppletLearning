@@ -1,10 +1,10 @@
 {
   "pages": [
-    
     "pages/welcome/welcome",
     "pages/post/post",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
