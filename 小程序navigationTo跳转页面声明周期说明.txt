@@ -1,0 +1,15 @@
+welcome.wxml页面向post.wxml页面以navigationTo方式进行跳转；
+我们会看到小程序生命周期调用过程：
+	onload  --> onshow -->onread
+	发生跳转（方式
+	1 redirectTo welcome页面会被onunload处理掉
+	2 navigationTo welcome页面会被onhide处理
+	）
+	到达 post 页面   success/fail函数调用 --> complete函数
+	welcome页面 调用onhide(如果success的话);
+post页面：
+	onload-->onshow --->onread
+返回父页面welcome
+    post页面被unload卸载掉。
+	welcome页面被onshow
+至此完成
