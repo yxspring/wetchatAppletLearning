@@ -1,4 +1,6 @@
 <!--pages/post/post.wxml-->
+<import src="post-item/post-item-tpl.wxml"/>
+
 <!-- 轮播图item -->
 <view>
     <swiper indicator-dots="true" autoplay="true" interval="3000">
@@ -13,25 +15,8 @@
       </swiper-item>
     </swiper>
 </view>
-   <!-- 文章列表 wx:for循环输出 -->
+   <!-- 文章列表 wx:for循环输出 使用模板 post-item-tpl.wxml -->
 <block wx:for="{{postList}}" wx:item="item" wx:for-index="idx">
-  <view class="post-container">
-  <view class="post-author-date">
-    <image src="{{item.avatar}}"></image>
-    <text>{{item.object.date}}</text>
-  </view>
-  <text class="post-title">{{item.title}}</text>
-    <image class="post-image" src="{{item.postImg}}" mode="aspectFill"></image>
-  <text class="post-content">
-          {{item.content}}
-  </text>
-  <view class="post-like">
-    <image src="../../images/icon/wx_app_collect.png"></image>
-    <text>{{item.collectionNum.array[0]}}</text>
-    <image src="../../images/icon/wx_app_view.png"></image>
-    <text>{{item.readingNum}}</text>
-    <image src="../../images/icon/wx_app_message.png"></image>
-    <text>{{item.commentNum}}</text>
-  </view>
-</view>
+      <!-- 使用...可以将数据展开 -->
+    <template is="postItemTpl" data="{{...item}}"></template>
 </block>
