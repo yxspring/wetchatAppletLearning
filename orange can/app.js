@@ -1,6 +1,22 @@
 //app.js
+var dataObject=require("data/data.js");
 App({
   onLaunch: function () {
+      // 获取缓存信息
+      var storageData=wx.getStorageSync('postList');
+    if (!storageData){
+      var dataObject=require("data/data.js")
+      wx.clearStorageSync();
+      wx.setStorageSync('postList', dataObject.postList);
+    }
+      // wx:wx.setStorage({
+      //   key: 'postList',
+      //   data: dataObject.postList,
+      //   success: function(res) {},
+      //   fail: function(res) {},
+      //   complete: function(res) {},
+      // })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

@@ -1,5 +1,6 @@
 // pages/post/post.js
-var dataObject=require("../../data/data.js");
+// var dataObject=require("../../data/data.js");
+var DBPost=require("../../db/DBPost.js").DBPost;
 Page({
 
   /**
@@ -7,13 +8,14 @@ Page({
    */
   data: {
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var dbPost=new DBPost();
     this.setData({
-      postList:dataObject.postList
+      postList: dbPost.getAllPostData()
     })
     console.log("post onload ！");
   },
