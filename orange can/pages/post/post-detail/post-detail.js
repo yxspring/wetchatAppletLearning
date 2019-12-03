@@ -1,64 +1,61 @@
-// pages/post/post.js
-// var dataObject=require("../../data/data.js");
-// var DBPost=require("../../db/DBPost.js").DBPost;
-import{DBPost} from "../../db/DBPost.js";
+// pages/post/post-detail/post-detail.js
+import { DBPost } from "../../../db/DBPost.js";
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
+
   },
-  // 跳转到文章详情页
-  onTapToDetail:function(event){
-      var postId=event.currentTarget.dataset.postId;
-      wx:wx.navigateTo({
-        url: 'post-detail/post-detail?id='+postId,
-      })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var dbPost=new DBPost();
-    this.setData({
-      postList: dbPost.getAllPostData()
-    })
-    console.log("post onload ！");
+      var postId=options.id;
+      this.dbPost=new DBPost(postId);
+      this.postData = this.dbPost.getPostItemById().data;
+      this.setData({
+        post:this.postData
+      })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("post onread！");
+      wx.setNavigationBarTitle({
+        title: this.postData.title,
+      })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("post show！");
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("post onhide！");
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("post unload！");
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-      
+
   },
 
   /**

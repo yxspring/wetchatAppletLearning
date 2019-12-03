@@ -2,7 +2,7 @@
   <view class="post-container">
       <view class="post-author-date">
         <image src="{{avatar}}"></image>
-        <text>{date}}</text>
+        <text>{{date}}</text>
       </view>
       <text class="post-title">{{title}}</text>
         <image class="post-image" src="{{postImg}}" mode="aspectFill"></image>
