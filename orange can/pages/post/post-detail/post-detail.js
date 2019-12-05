@@ -20,7 +20,14 @@ Page({
         post:this.postData
       })
   },
-
+  onCollectionTap:function(event){
+    var newData = this.dbPost.collect();
+    //重新绑定数据 更新部分数据
+    this.setData({
+      'post.collectionStatus':newData.collectionStatus,
+      'post.collectionNum':newData.collectionNum
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
