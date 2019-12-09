@@ -55,6 +55,10 @@ class DBPost{
   collect(){
     return this.updatePostData('collect');
   }
+  //点赞文章
+  up(){
+    return this.updatePostData('up');
+  }
   //更新本地的点赞、评论信息、收藏、阅读量
   updatePostData(category){
     var itemData=this.getPostItemById(),
@@ -72,6 +76,16 @@ class DBPost{
                 postData.collectionStatus=false;
               }
               break;
+        case 'up':
+            //处理点赞
+            if (!postData.upStatus){//当前文章还未点赞
+              postData.upStatus=true;
+              postData.upNum++;
+            }else{//当前文章已经被点赞 取消点赞
+                postData.upStatus=false;
+                postData.upNum--;
+            }
+            break;
           default:
             break;
     }

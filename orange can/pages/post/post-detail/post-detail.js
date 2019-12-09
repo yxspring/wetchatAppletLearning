@@ -27,6 +27,26 @@ Page({
       'post.collectionStatus':newData.collectionStatus,
       'post.collectionNum':newData.collectionNum
     })
+    wx.showToast({
+      title: newData.collectionStatus?'收藏成功':'取消成功',
+      icon: 'success',
+      duration: 1000,
+      mask: true,
+    })
+  },
+  onUpTap:function(event){
+    var newData=this.dbPost.up();
+    //更改数据
+    this.setData({
+      'post.upStatus': newData.upStatus,
+      'post.upNum':newData.upNum
+    })
+    wx.showToast({
+      title: newData.upStatus ? '点赞成功' : '取消成功',
+      icon: 'success',
+      duration: 1000,
+      mask: true,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
