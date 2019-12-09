@@ -48,6 +48,12 @@ Page({
       mask: true,
     })
   },
+  onCommentTap: function (event) {
+    var id = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: '../post-comment/post-comment?id=' + id
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,3 +1,4 @@
+var util=require("../utils/util.js")
 // var DBPost=function(){
 //   this.storageKeyName='postList';//所有文章本地缓存存储键值
 // }
@@ -41,7 +42,27 @@ class DBPost{
       }
     }
   }
-
+  //得到文章的评论信息
+  getCommentData(){
+    var itemData=this.getPostItemById().data;//获取文章信息
+    itemData.comments.sort(this.compareWithTime);
+    var len=itemData.comments.length,comment;
+    for(var i=0;i<len;i++){
+      comment=itemData.comments[i];
+      comment.create_time=util.getDiffTime(comment.create_time,true);
+    }
+    return itemData.comments;
+  }
+  compareWithTime(value1,value2){
+    var flag=parseFloat(value1.create_time)-parseFloat(value2.create_time);
+    if(flag<0){
+      return 1;
+    }else if(flag>0){
+      return -1;
+    }else{
+      return 0;
+    }
+  }
   //得到文章信息
   getAllPostData(){
     var res=wx.getStorageSync(this.storageKeyName);
