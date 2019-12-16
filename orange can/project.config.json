@@ -22,7 +22,7 @@
 		"bundle": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
+	"libVersion": "2.9.4",
 	"appid": "wxfa0a9faa87e6287f",
 	"projectname": "orange%20can",
 	"debugOptions": {
